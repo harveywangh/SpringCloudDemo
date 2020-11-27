@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.kaidun.user.dao.mapper.KdaStudentUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.kaidun.user.dao.entity.KdaStudentUser">
+        <id column="KSU_ID" property="ksuId" />
+        <result column="KSU_STU_ID" property="ksuStuId" />
+        <result column="KSU_USER_CODE" property="ksuUserCode" />
+        <result column="KSU_USER_PWD" property="ksuUserPwd" />
+        <result column="KSU_USER_ENABLED" property="ksuUserEnabled" />
+        <result column="KSU_USER_STU_HEAD_IMG" property="ksuUserStuHeadImg" />
+        <result column="KSU_USER_FAM_HEAD_IMG" property="ksuUserFamHeadImg" />
+        <result column="KSU_USER_CREATE_DATE" property="ksuUserCreateDate" />
+        <result column="KSU_QR_CODE_URL" property="ksuQrCodeUrl" />
+        <result column="KSU_FAM_LAST_TIME" property="ksuFamLastTime" />
+        <result column="KSU_START_DATE" property="ksuStartDate" />
+        <result column="KSU_END_DATE" property="ksuEndDate" />
+    </resultMap>
+    <select id="selectListInfo" resultType="com.example.kaidun.user.dao.entity.KdaStudentUser">
+
+        select * from KDA_STUDENT_USER
+        WHERE KSU_USER_CODE = #{pojo.ksuUserCode}
+
+    </select>
+</mapper>

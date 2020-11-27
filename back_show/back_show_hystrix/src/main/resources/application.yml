@@ -1,0 +1,14 @@
+server:
+  port: 7501
+
+
+spring:
+  application:
+    name: hystrix-service
+
+
+
+
+
+logging:
+  config: classpath:logback.xml

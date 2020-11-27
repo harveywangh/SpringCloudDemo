@@ -1,0 +1,37 @@
+server:
+  port: 8301
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+#什么样的端口可以对外暴露
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  application:
+    name: film-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/meetingfilm?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=UTC
+    username: root
+    password: harvey
+    filters: log4j,wall,mergeStat
+
+mybatis-plus:
+  mapper-locations: classpath*:com/example/kaidun/**/xml/*Mapper.xml
+  global-config:
+    id-type: 0
+    db-column-underline: false
+    refresh-mapper: true
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  config: classpath:logback.xml

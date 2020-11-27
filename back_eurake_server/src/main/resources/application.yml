@@ -1,0 +1,28 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  service-url:
+    defaultZone: http://harvey:123@localhost:8761/eureka/
+
+spring:
+  security:
+    user:
+      name: harvey
+      password: 123
+      roles: SUPERUSER
+
+logging:
+  config: classpath:logback.xml
+
+
+#  CAP理论
+#  C 一致性
+#  A 可用性
+#  P 分区容错性
