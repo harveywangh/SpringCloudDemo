@@ -15,11 +15,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface FilmFeignApis {
 
 
+
     /**
      * 对外暴露的接口服务
      *
      * @param filmId
      * @return
+     *
+     *
      * @throws CommonServiceException
      */
     @RequestMapping(value = "/films/{filmId}", method = RequestMethod.GET)
