@@ -17,7 +17,7 @@ public interface FilmFeignApis {
 
 
     /**
-     * 对外暴露的接口服务
+     * 对外暴露的接口服务1111ssss
      *
      * @param filmId
      * @return
