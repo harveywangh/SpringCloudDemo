@@ -36,6 +36,7 @@ public class FilmController {
     @GetMapping(value = "/actors")
     public BaseResponseVo describeActors(@RequestBody  BasePageVo basePageVo) throws CommonServiceException {
         basePageVo.checkParam();
+        System.out.println("test");
         IPage<DescribeActorsRespVo> iPage = filmsService.actorList(basePageVo);
         return BaseResponseVo.success(describePageResult(iPage,"actors"));
     }
