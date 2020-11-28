@@ -26,4 +26,5 @@ public interface FilmFeignApis {
     BaseResponseVo<DescribeFilmRespVo> describeFilmById(@PathVariable("filmId") String filmId) throws CommonServiceException;
 
 
+
 }
