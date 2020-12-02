@@ -17,17 +17,19 @@ public interface FilmFeignApis {
 
 
     /**
+     * 对外暴露的接口服务22222
+     *
      * 对外暴露的接口服务222223333
      *33333
      * @param filmId
      * @return
      *
      *
+     *
      * @throws CommonServiceException
      */
     @RequestMapping(value = "/films/{filmId}", method = RequestMethod.GET)
     BaseResponseVo<DescribeFilmRespVo> describeFilmById(@PathVariable("filmId") String filmId) throws CommonServiceException;
-
 
 
 }

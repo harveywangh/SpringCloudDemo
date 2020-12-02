@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  * @description : 解决跨域问题
  **/
 @Component
-public class CorsFilter extends ZuulFilter {
+public classCorsFilter extends ZuulFilter {
 
     public String filterType() {
         return "pre";
