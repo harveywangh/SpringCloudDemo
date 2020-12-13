@@ -49,8 +49,10 @@ public class CorsFilter extends ZuulFilter {
          *
          *   --》示例
          *   缺陷：如果出现跨域策略不足的情况，需要修改代码重新部署
-         *   --》Nginx配置跨域
+         *   --》Nginx配置跨域 111
          */
+
+
 
 
 
